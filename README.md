@@ -1,19 +1,20 @@
 # AccountBook_Website
 
 
-< My role >
+
+## My role 
 
  I played the role of implementing board post comment in the reply folder and almost all of a housekeeping book function in household folder.
 Also, I had created an AWS server to start the our web service.
 
 
-< Development environment >
+## Development environment 
 
  JDK 8.0, Oracle Database 11g, Apache Tomcat 9.0, eclips
 
 
 
-If you execute this project, have to do below list.
+## If you execute this project, have to do below list.
 
 
 1. We used oracle 11g xe version as DB. I wrote DB instruction that we used in DB.txt file.
