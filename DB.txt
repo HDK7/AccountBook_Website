@@ -1,0 +1,88 @@
+﻿--board post reply table--
+create table reply (
+   replyseq number(20),
+   boardseq number(20),
+   id varchar2(20) ,
+   name varchar2(20),
+   content varchar2(4000),
+   w_date date
+)
+
+create sequence replyseq
+	start with 1
+	increment by 1
+	minvalue 1
+	nocycle
+
+-- board likey button table --
+create table likey(
+ id varchar2(20) ,
+ seq number(5),
+ likey varchar2(10)
+);
+
+--free board table--
+create sequence seq_board;
+
+create table free_board(
+	seq number(5),
+	title varchar2(100),           
+	writer varchar2(30),
+	contents varchar2(4000),	
+	time varchar2(30),
+	viewcount number(5),
+	recommend_cnt number(5)
+)
+
+;
+
+--account book table--
+create sequence hhkey
+	start with 1
+	increment by 1
+	minvalue 1
+	nocycle
+
+create table household (
+   key number(20),
+   id  varchar2(20),
+   w_date  varchar2(20), 
+   category  varchar2(20),
+   content varchar2(20) ,
+   price number(20),
+   type number(1)
+)
+
+--notice board table--
+create table notice(
+seq number(5),
+title varchar2(100),     
+writer varchar2(30),      
+contents varchar2(4000),
+time varchar2(30),
+viewcount number(5),
+recommend_cnt number(5)
+);
+
+create sequence seq_notice;
+
+--member table--
+create table membertest (
+   id varchar2(20) primary key,
+   name varchar2(20),
+   email varchar2(30),
+   password varchar2(20),
+   address varchar2(60),
+   status varchar2(20),
+   class varchar2(20),
+   score number(20)
+);
+
+
+insert into MEMBERTEST values ('admin','admin','xxxx','1234','xxxx','offline','admin',100000); // 관리자 추가
+
+---attendance check table ----
+create table attendance (
+  id varchar2(20),
+  w_date varchar2(20)
+);
