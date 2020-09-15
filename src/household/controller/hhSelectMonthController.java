@@ -80,11 +80,9 @@ public class hhSelectMonthController extends HttpServlet {
 					m.get(i).setKey(0);
 				}
 			}
-		}	
+		}			
 		
-		
-		request.setAttribute("m", m);		
-		
+		request.setAttribute("m", m);				
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/household/HouseholdMonthView_designTest.jsp");
 		

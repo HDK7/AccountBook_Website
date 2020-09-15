@@ -54,8 +54,7 @@ public class ListController extends HttpServlet {
 		
 		for(int i = page; i < last; i++ ) {
 			list.add(temp.get(i));
-		}		
-		
+		}				
 		
 		request.setAttribute("list", temp); // list temp로 수정
 		int size = ( ( temp.size() - 1 ) / 10 )+ 1;

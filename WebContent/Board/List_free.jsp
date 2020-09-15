@@ -6,18 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
 <style>
 </style>
 </head>
-<body>
-	
-	
-	<c:import url="/FreeListController"></c:import>	
-	
-		
-		
+<body>	
+	<c:import url="/FreeListController"></c:import>			
 	   <h3>글 목록</h3>
+	   
 	   <a href="${pageContext.request.contextPath}/Board/Write_designTest.jsp" style="color:black">글작성</a>
   			
       <table border="1" cellspacing="0">
@@ -41,19 +36,10 @@
                <td>${b.recommend_cnt}</td>
             </tr>
          </c:forEach>
-      </table>
-      
+      </table>      
       
       <c:forEach var="i" begin="1" end="${totalpage }">
       <a href="${pageContext.request.contextPath }/Board/List_free.jsp?pagenum=${i}" style="color:black">${i}</a>
       </c:forEach>
-      
-      
-      
-
-
-	
-	
-
 </body>
 </html>

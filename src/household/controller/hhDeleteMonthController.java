@@ -37,12 +37,14 @@ public class hhDeleteMonthController extends HttpServlet {
 		HttpSession session = request.getSession();
 		hhDao dao = new hhDao();
 		String month;
+		
 		if(request.getParameter("month").equals("10") || request.getParameter("month").equals("11")|| request.getParameter("month").equals("12")) {
 			month = request.getParameter("month");
 		}
 		else {
 			month = '0' + request.getParameter("month");
 		}
+		
 		String date = request.getParameter("year") + "-" + month;
 		String id = (String)session.getAttribute("id");
 		

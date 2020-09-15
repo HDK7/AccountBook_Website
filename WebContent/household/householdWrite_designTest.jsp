@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script>
+//ajax를 위한 XMLHttp 함수
 function getXMLHttpRequest(){
 	var httpRequest = null;
 	
@@ -22,17 +23,18 @@ function getXMLHttpRequest(){
 	else if(window.XMLHttpRequest){
 		httpRequest = new window.XMLHttpRequest();
 	}
+	
 	return httpRequest;
 }
 
+//공란 확인 및 전송
 function hhWrite(year, month){
 	var form = document.getElementById("hhWriteForm");
 	var type = form.type.value;
 	var date = form.date.value;
 	var category = form.category.value;
 	var content = form.content.value;
-	var price = form.price.value;
-	
+	var price = form.price.value;	
 	
 	if(!category || !content || !price || !type ){ // 여기까지 했음.
 		alert("공란이 있습니다");
@@ -56,6 +58,7 @@ function hhWrite(year, month){
 	}
 }
 
+//카테고리 추가
 function hhCategoryWrite(year, month){
 	var form = document.getElementById("hhWriteForm");
 	var type = 3;	
@@ -73,8 +76,7 @@ function hhCategoryWrite(year, month){
 		return false;
 	}
 	else{
-			var param = "content=" + content + "&type=" + type + "&date=" + date + "&category=" + category + "&price=" + price;
-		
+			var param = "content=" + content + "&type=" + type + "&date=" + date + "&category=" + category + "&price=" + price;		
 		
 			httpRequest = getXMLHttpRequest();
 			httpRequest.onreadystatechange = checkFunc;
@@ -83,7 +85,8 @@ function hhCategoryWrite(year, month){
 			httpRequest.send(param);
 		}
 	}
-	
+
+//카테고리 삭제
 function categoryDelete(){
 	var form = document.getElementById("hhWriteForm");
 	var category = form.category.value;	
@@ -102,6 +105,7 @@ function categoryDelete(){
 	}
 }
 
+//서버 응답 후 새로고침
 function checkFunc(){
 	if(httpRequest.readyState == 4){
 		var resultText = httpRequest.responseText;
@@ -113,58 +117,76 @@ function checkFunc(){
 </script>
 </head>
 <body>
-<c:import url="/hhGetCatAllController"/>
+	<c:import url="/hhGetCatAllController" />
+	
+	<!-- 가계부 입력 폼 -->
 	<form class="form-group" action="" id="hhWriteForm">
 		<table class="table table-bordered" width="100%" cellspacing="0">
-		<tr>
-			<td></td><td><input type="radio" name="type" value="0">지출<input type="radio" name="type" value="1">수입</td>
-		</tr>
-		<tr>
-			<td>날짜 </td><td><input class="form-control" type="date" name="date"></td>
-		</tr>
-		
-		<tr>
-		<td>카테고리 </td>
-		<td>
-		<div class="input-group">
-		  	<select class="custom-select" name="category" id="category">
-			    
-			    <c:forEach var="cat" items="${cat}">
-					<c:if test="${cat.category ne '자동생성'}">
-						<option value="${cat.category }">${cat.category }</option>	
-					</c:if>	
-				</c:forEach>
-		 	</select>
-			  <div class="input-group-append">
-			    <button class="btn btn-outline-secondary" type="button" onclick="categoryDelete()">삭제</button>
-			  </div>
-		</div>
-		</td>
-		</tr>
+			<!-- 수입지출 선택 -->
+			<tr>
+				<td></td>
+				<td><input type="radio" name="type" value="0">지출<input
+					type="radio" name="type" value="1">수입</td>
+			</tr>
+			
+			<!-- 날짜 선택 -->
+			<tr>
+				<td>날짜</td>
+				<td><input class="form-control" type="date" name="date"></td>
+			</tr>
+			
+			<!-- 카테고리 선택, 삭제 -->
+			<tr>
+				<td>카테고리</td>
+				<td>
+					<div class="input-group">
+						<select class="custom-select" name="category" id="category">
 
-		<tr><td></td>
-		<td>
-			<div class="input-group">
-			  <input type="text" class="form-control" placeholder="추가할 카테고리 입력" name="addcategory">
-			  <div class="input-group-append">
-			    <button class="btn btn-outline-secondary" type="button" onclick="hhCategoryWrite(${year}, ${month})">추가</button>
-			  </div>
-			</div>
-		</td>
-		</tr>
-		
-		<tr> 
-			<td>내용 </td><td><input class="form-control" type="text" name="content"></td>
-		</tr>
-		<tr>
-			<td>금액 </td>
-			<td><input class="form-control" type="number" name="price"></td>
-		</tr>
+							<c:forEach var="cat" items="${cat}">
+								<c:if test="${cat.category ne '자동생성'}">
+									<option value="${cat.category }">${cat.category }</option>
+								</c:if>
+							</c:forEach>
+						</select>
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary" type="button"
+								onclick="categoryDelete()">삭제</button>
+						</div>
+					</div>
+				</td>
+			</tr>
+			
+			<!-- 카테고리 추가 -->
+			<tr>
+				<td></td>
+				<td>
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="추가할 카테고리 입력"
+							name="addcategory">
+						<div class="input-group-append">
+							<button class="btn btn-outline-secondary" type="button"
+								onclick="hhCategoryWrite(${year}, ${month})">추가</button>
+						</div>
+					</div>
+				</td>
+			</tr>
+			
+			<!-- 내용 -->
+			<tr>
+				<td>내용</td>
+				<td><input class="form-control" type="text" name="content"></td>
+			</tr>
+			
+			<!-- 금액 -->
+			<tr>
+				<td>금액</td>
+				<td><input class="form-control" type="number" name="price"></td>
+			</tr>
 		</table>
 		
-			<input class="btn btn-secondary float-right" type="reset" value="초기화">
-			<input class="btn btn-dark float-right" type="button" value="작성 완료" onclick="hhWrite(${year},${month})"> 
-		
+		<!-- 초기화, 제출 -->
+		<input class="btn btn-secondary float-right" type="reset" value="초기화">
+		<input class="btn btn-dark float-right" type="button" value="작성 완료" onclick="hhWrite(${year},${month})">
 	</form>
 </body>
 </html>

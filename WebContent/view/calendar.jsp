@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -7,13 +7,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-    table
-    {
-        border:1px solid #BDBDBD;
-        text-align:center;
-        width:80%;
-        height:500px;
-    }
+table {
+	border: 1px solid #BDBDBD;
+	text-align: center;
+	width: 80%;
+	height: 500px;
+}
 </style>
 <script>
 	// javascript Trie구현
@@ -209,20 +208,22 @@
 </head>
 <body onload="build()">
 	<table align="center" id="calendar">
-        <tr>
-            <td><font size=1%; color="#B3B6B3"><label onclick="beforem()" id="before" ></label></font></td>
-            <td colspan="5" align="center" id="yearmonth"></td>
-            <td><font size=1%; color="#B3B6B3"><label onclick="nextm()" id="next"></label></font></td>
-        </tr>
-        <tr>
-            <td align="center" width="80px"> <font color="#FF9090">일</font></td>
-            <td align="center" width="80px"> 월 </td>
-            <td align="center" width="80px"> 화 </td>
-            <td align="center" width="80px"> 수 </td>
-            <td align="center" width="80px"> 목 </td>
-            <td align="center" width="80px"> 금 </td>
-            <td align="center" width="80px"><font color=#7ED5E4>토</font></td>
-        </tr>
-    </table>
+		<tr>
+			<td><font size=1%; color="#B3B6B3"><label
+					onclick="beforem()" id="before"></label></font></td>
+			<td colspan="5" align="center" id="yearmonth"></td>
+			<td><font size=1%; color="#B3B6B3"><label
+					onclick="nextm()" id="next"></label></font></td>
+		</tr>
+		<tr>
+			<td align="center" width="80px"><font color="#FF9090">일</font></td>
+			<td align="center" width="80px">월</td>
+			<td align="center" width="80px">화</td>
+			<td align="center" width="80px">수</td>
+			<td align="center" width="80px">목</td>
+			<td align="center" width="80px">금</td>
+			<td align="center" width="80px"><font color=#7ED5E4>토</font></td>
+		</tr>
+	</table>
 </body>
 </html>
