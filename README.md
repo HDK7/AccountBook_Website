@@ -8,7 +8,7 @@ Also, I had created an AWS server to start the our web service.
 
 ## Development environment 
 
- JDK 8.0, Oracle Database 11g, Apache Tomcat 9.0, Eclips  
+ JDK 8.0, Oracle Database 11g, Apache Tomcat 9.0, Eclipse
 <br>
 
 ## If you execute this project, have to do below list.
