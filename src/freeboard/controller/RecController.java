@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.sun.xml.internal.ws.wsdl.writer.document.Service;
 
 import freeboard.dao.Dao;
 import freeboard.dao.Dao_impl;

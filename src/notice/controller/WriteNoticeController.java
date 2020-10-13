@@ -14,7 +14,6 @@ import freeboard.dao.Dao_impl;
 import model.BoardVO;
 import notice.service.NoticeService;
 import notice.service.NoticeServiceImpl;
-import sun.reflect.ReflectionFactory.GetReflectionFactoryAction;
 import freeboard.service.ServiceImpl;
 import freeboard.service.nService;
 

@@ -46,7 +46,7 @@
          var param = "id="+idTxt
          httpRequest = getXMLHttpRequest();
          httpRequest.onreadystatechange = callback;
-         httpRequest.open("POST","http://13.209.93.8:8081/Project_semi/MemberIdCheckController",true);
+         httpRequest.open("POST","http://localhost:8081/Project_semi/MemberIdCheckController",true);
          httpRequest.setRequestHeader('Content-Type','application/x-www-form-urlencoded'); // 헤더 선언 중요!
          httpRequest.send(param); // id="idTxt" 전달 / 주소?뒤에 썼다고 생각하면 된다.(request값 설정)
       }

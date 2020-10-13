@@ -34,7 +34,7 @@
 	function delConfirm(key) {
 		var result = confirm("정말로 삭제할까요?");
 		if (result) {
-			location.href = "http://13.209.93.8:8081/Project_semi/hhDeleteController?key="
+			location.href = "http://localhost:8081/Project_semi/hhDeleteController?key="
 					+ String(key)
 		} else {
 			alert("취소 되었습니다.");

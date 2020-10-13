@@ -20,7 +20,7 @@
 function delConfirm(replyseq){
 	var result = confirm("정말로 삭제할까요?");
 	if(result){
-	    location.href="http://13.209.93.8:8081/Project_semi/DelReplyController?replyseq=" + String(replyseq)
+	    location.href="http://localhost:8081/Project_semi/DelReplyController?replyseq=" + String(replyseq)
 	}else{
 	    alert("취소 되었습니다.");
 	}
@@ -59,7 +59,7 @@ function writeCmt(sequence){
 		
 		httpRequest = getXMLHttpRequest();
 		httpRequest.onreadystatechange = checkFunc;
-		httpRequest.open("POST", "http://13.209.93.8:8081/Project_semi/WriteController",true);
+		httpRequest.open("POST", "http://localhost:8081/Project_semi/WriteController",true);
 		httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
 		httpRequest.send(param);
 	}

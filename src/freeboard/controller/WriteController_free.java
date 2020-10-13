@@ -12,7 +12,6 @@ import javax.servlet.http.HttpSession;
 
 import freeboard.dao.Dao_impl;
 import model.BoardVO;
-import sun.reflect.ReflectionFactory.GetReflectionFactoryAction;
 import freeboard.service.ServiceImpl;
 import freeboard.service.nService;
 
