@@ -14,7 +14,7 @@
 
 1. We used oracle 11g xe version as DB. I wrote DB instruction that we used in DB.txt file.
 2. Use Tomcat 9.0 & JDK 1.8
-2. We use TCP 8081 port.
+2.  use TCP 8081 port.
 
 
  Main page : http://localhost:8081/AccountBook_Website/view/main.jsp
