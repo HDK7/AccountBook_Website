@@ -51,7 +51,7 @@ function hhWrite(year, month){
 		
 			httpRequest = getXMLHttpRequest();
 			httpRequest.onreadystatechange = checkFunc;
-			httpRequest.open("POST", "http://localhost:8081/Project_semi/hhWriteController",true);
+			httpRequest.open("POST", "http://localhost:8081/AccountBook_Website/hhWriteController",true);
 			httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
 			httpRequest.send(param);
 		}
@@ -80,7 +80,7 @@ function hhCategoryWrite(year, month){
 		
 			httpRequest = getXMLHttpRequest();
 			httpRequest.onreadystatechange = checkFunc;
-			httpRequest.open("POST", "http://localhost:8081/Project_semi/hhWriteCatController",true);
+			httpRequest.open("POST", "http://localhost:8081/AccountBook_Website/hhWriteCatController",true);
 			httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
 			httpRequest.send(param);
 		}
@@ -96,7 +96,7 @@ function categoryDelete(){
 			
 			httpRequest = getXMLHttpRequest();
 			httpRequest.onreadystatechange = checkFunc;
-			httpRequest.open("POST", "http://localhost:8081/Project_semi/hhDeleteCategory",true);
+			httpRequest.open("POST", "http://localhost:8081/AccountBook_Website/hhDeleteCategory",true);
 			httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
 			httpRequest.send(param);
 	}

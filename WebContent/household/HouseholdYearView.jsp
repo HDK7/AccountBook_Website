@@ -10,7 +10,7 @@
 </head>
 <body>
 	<!-- /householdYearGraphController -->
-	<!-- http://localhost:8081/Project_semi/householdYearGraphController?id=${sessionScope.id }&type=1 -->
+	<!-- http://localhost:8081/AccountBook_Website/householdYearGraphController?id=${sessionScope.id }&type=1 -->
 
 	<jsp:include
 		page="/householdYearGraphController?id=${sessionScope.id }&type=1" />

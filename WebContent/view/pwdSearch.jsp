@@ -47,7 +47,7 @@
 		httpRequest
 				.open(
 						"POST",
-						"http://localhost:8081/Project_semi/MemberPwdSearchController",
+						"http://localhost:8081/AccountBook_Website/MemberPwdSearchController",
 						true);
 		httpRequest.setRequestHeader('Content-Type',
 				'application/x-www-form-urlencoded'); // 헤더 선언 중요!
@@ -73,7 +73,7 @@
 				emailTxt = emailTxt.trim();
 				alert("등록한 이메일로 인증키를 전송하였습니다.");
 				//window.close();
-				location.href = 'http://localhost:8081/Project_semi/view/pwdSearchSend.jsp?Authkey='
+				location.href = 'http://localhost:8081/AccountBook_Website/view/pwdSearchSend.jsp?Authkey='
 						+ result + '&Email=' + emailTxt; // request로 authkey와 email값 전달
 			}
 		}

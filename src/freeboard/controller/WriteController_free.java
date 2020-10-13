@@ -51,7 +51,7 @@ public class WriteController_free extends HttpServlet {
 		
 		service.writerBoard(b);
 		
-		response.sendRedirect("/Project_semi/FreeListController");
+		response.sendRedirect("/AccountBook_Website/FreeListController");
 		/*
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/FreeListController");
 		if(dispatcher != null) {

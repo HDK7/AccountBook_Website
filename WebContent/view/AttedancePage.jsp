@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <!-- Custom styles for this template -->
 <link
-	href="${pageContext.request.contextPath }/startbootstrap-sb-admin-2-gh-pages/css/sb-admin-2.min.css"
+	href="${pageContext.request.contextPath}/startbootstrap-sb-admin-2-gh-pages/css/sb-admin-2.min.css"
 	rel="stylesheet">
 </head>
 <body>
@@ -35,7 +35,7 @@
 				</div>
 				<br>
 				<c:import url="/AttendanceCalendarController" />
-				<br> <br>
+				<br> 
 			</div>
 			<!-- /.container-fluid -->
 

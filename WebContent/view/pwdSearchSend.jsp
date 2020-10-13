@@ -14,7 +14,7 @@
 
 		if (inputAuthKey == Authkey) {
 			alert("이메일로 임시 비밀번호를 전송합니다. 잠시만 기다려주세요.");
-			location.href = "http://localhost:8081/Project_semi/MemberPwdMakeController?email="
+			location.href = "http://localhost:8081/AccountBook_Website/MemberPwdMakeController?email="
 					+ email;
 		} else {
 			alert("인증번호를 확인하세요");

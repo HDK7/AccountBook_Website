@@ -115,7 +115,7 @@
          var param = "email="+emailTxt
          httpRequest = getXMLHttpRequest();
          httpRequest.onreadystatechange = callback;
-         httpRequest.open("POST","http://localhost:8081/Project_semi/MemberEmailcheckController",true);
+         httpRequest.open("POST","http://localhost:8081/AccountBook_Website/MemberEmailcheckController",true);
          httpRequest.setRequestHeader('Content-Type','application/x-www-form-urlencoded'); // 헤더 선언 중요!
          httpRequest.send(param); // email="emailTxt" 전달 / 주소?뒤에 썼다고 생각하면 된다.(request값 설정)
       }    

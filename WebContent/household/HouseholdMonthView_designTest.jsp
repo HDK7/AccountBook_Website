@@ -20,7 +20,7 @@
 	function delConfirm(year, month) {
 		var result = confirm("정말로 삭제할까요?");
 		if (result) {
-			location.href = "http://localhost:8081/Project_semi/hhDeleteMonthController?year="
+			location.href = "http://localhost:8081/AccountBook_Website/hhDeleteMonthController?year="
 					+ String(year) + "&month=" + String(month);
 		} else {
 			alert("취소 되었습니다.");
