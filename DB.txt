@@ -79,7 +79,7 @@ create table membertest (
 );
 
 
-insert into MEMBERTEST values ('admin','admin','xxxx','1234','xxxx','offline','admin',100000); // 관리자 추가
+insert into MEMBERTEST values ('admin','admin','xxxx','1234','xxxx','offline','관리자',100000); // 관리자 추가 id: admin, password: 1234
 
 ---attendance check table ----
 create table attendance (
