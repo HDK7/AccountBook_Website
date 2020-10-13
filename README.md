@@ -16,5 +16,5 @@
 2. Use Tomcat 9.0 & JDK 1.8
 2. We use TCP 8081 port.
 
-<Main page>
-http://localhost:8081/AccountBook_Website/view/main.jsp
+
+ Main page : http://localhost:8081/AccountBook_Website/view/main.jsp
