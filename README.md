@@ -14,5 +14,8 @@ Also, I had created an AWS server to start the our web service.
 ## If you execute this project, have to do below list.
 
 1. We used oracle 11g xe version as DB. I wrote DB instruction that we used in DB.txt file.
+2. Use Tomcat 9.0 & JDK 1.8
 2. We use TCP 8081 port.
-3. Add the library files in the WEB-INF/lib folder to the settings.
+
+<Main page>
+http://localhost:8081/AccountBook_Website/view/main.jsp
